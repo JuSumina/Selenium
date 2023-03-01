@@ -28,7 +28,7 @@ public class Facebook {
         driver.findElement(By.name("sex")).click();
         Thread.sleep(1000);
         driver.findElement(By.name("websubmit")).click();
-        
+
         Thread.sleep(3000);
         driver.close();
         Thread.sleep(3000);
