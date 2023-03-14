@@ -28,11 +28,17 @@ public class WindowHandle1 {
             System.out.println(wh);
         }
 
-        /*for(String wh: windowHandles) {
-            driver.switchTo(wh);
-            driver.getTitle();
-            if (title)
-        }*/
+        for(String wh: windowHandles) {
+            driver.switchTo().window(wh);
+            String title = driver.getTitle();
+            if (title.equalsIgnoreCase("Privacy Policy – Privacy & Terms – Google")) {
+                break;
+            }
+        }
+
+        System.out.println(driver.getTitle());
+
+
         
     }
 }
